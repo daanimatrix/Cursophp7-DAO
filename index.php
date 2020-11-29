@@ -3,6 +3,7 @@
     //Dando espansão para a pagina config.php
     require_once("config.php");
 
+    /*
     //instanciando a classe sql
     $sql = new Sql();
 
@@ -10,5 +11,13 @@
     $sql->select("SELECT * FROM tb_usuarios");
 
     echo json_encode($usuarios);
+    */
+    $usuario = new Usuario();
+
+    $usuario->loadById(2);
+
+    echo $usuario ;
+    
+
     
 ?>
